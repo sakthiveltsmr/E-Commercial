@@ -75,7 +75,7 @@ const Login = () => {
             </Link>
           </Button>
           <Links>DO NOT YOU REMEMBER THE PASSWORD?</Links>
-          <Link to="/register">
+          <Link to="/register" style={{ color: "black" }}>
             <Links>CREATE A NEW ACCOUNT </Links>
           </Link>
         </Form>

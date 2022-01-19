@@ -89,7 +89,7 @@ const Footer = () => {
       <Left>
         <Logo>S_Cart</Logo>
         <Desc>
-          S_Cart remains most popular e-commerce brand in India: RedSeer report.
+          S_Cart remains most popular e-commerce brand in India. RedSeer report.
           ... S_Cart's numbers were helped mainly because of greater brand
           recall among consumers, even as it improved on key metrics such as
           product assortment and lower product prices
