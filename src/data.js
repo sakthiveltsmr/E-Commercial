@@ -67,7 +67,7 @@ export const popularProducts = [
   },
   {
     id: 7,
-    img: "https://ie.elis.com/sites/ie.elis.com/files/styles/product_cover/public/2021/11/21/IRWW_ArrowJacket_BlueFront.png?h=2d125a96&itok=0pdl64zX",
+    img: "https://www.pngarts.com/files/3/Hooded-Jacket-Men-PNG-Download-Image.png",
   },
   {
     id: 8,
