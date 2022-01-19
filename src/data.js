@@ -2,7 +2,7 @@ export const sliderItems = [
   {
     id: 1,
     img: "https://marketing4ecommerce.net/wp-content/uploads/2015/07/experiencia-de-compra3-1-759x500.png",
-    title: "SUMMER SALE",
+    title: "PONGAL SALE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "f5fafd",
   },

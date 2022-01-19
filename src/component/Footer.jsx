@@ -87,11 +87,12 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>Sakthi</Logo>
+        <Logo>S_Cart</Logo>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+          S_Cart remains most popular e-commerce brand in India: RedSeer report.
+          ... S_Cart's numbers were helped mainly because of greater brand
+          recall among consumers, even as it improved on key metrics such as
+          product assortment and lower product prices
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">

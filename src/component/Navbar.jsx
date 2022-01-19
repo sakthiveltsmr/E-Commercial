@@ -1,8 +1,10 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
+// import Register from "../pages/Register";
 const Container = styled.div`
   height: 60px;
   //   background-color: black;
@@ -55,7 +57,7 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>English</Language>
+          <Language>EN</Language>
           <SearchContainer>
             <Input /> <Search style={{ color: "gray" }} />
           </SearchContainer>
@@ -64,13 +66,22 @@ const Navbar = () => {
           <Logo>E-Commercial</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+          <Link
+            to="/register"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to="/signin" style={{ textDecoration: "none", color: "black" }}>
+            <MenuItem>SIGN IN</MenuItem>
+          </Link>
+          <Link to="/cart" style={{ textDecoration: "none", color: "black" }}>
+            <MenuItem>
+              <Badge badgeContent={4} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
