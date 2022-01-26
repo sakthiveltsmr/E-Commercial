@@ -3,7 +3,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { sliderItems } from "../data";
-import { mobile } from "../responsive";
+import { small } from "../responsive";
+
+const SliderDiv = styled.div`
+  ${small({ display: "none" })}
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -11,7 +15,6 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
 `;
 
 const Arrow = styled.div`
@@ -55,6 +58,7 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
+  width: 500px;
 `;
 
 const InfoContainer = styled.div`
@@ -91,30 +95,32 @@ const Slider = () => {
   };
 
   return (
-    <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined />
-      </Arrow>
-      <Wrapper slideIndex={slideIndex}>
-        {sliderItems.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
-            <ImgContainer>
-              <Image src={item.img} />
-            </ImgContainer>
-            <InfoContainer>
-              <Title>{item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Link to="/categories">
-                <Button>SHOW NOW</Button>
-              </Link>
-            </InfoContainer>
-          </Slide>
-        ))}
-      </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")}>
-        <ArrowRightOutlined />
-      </Arrow>
-    </Container>
+    <SliderDiv>
+      <Container>
+        <Arrow direction="left" onClick={() => handleClick("left")}>
+          <ArrowLeftOutlined />
+        </Arrow>
+        <Wrapper slideIndex={slideIndex}>
+          {sliderItems.map((item) => (
+            <Slide bg={item.bg} key={item.id}>
+              <ImgContainer>
+                <Image src={item.img} />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>{item.title}</Title>
+                <Desc>{item.desc}</Desc>
+                <Link to="/categories">
+                  <Button>SHOW NOW</Button>
+                </Link>
+              </InfoContainer>
+            </Slide>
+          ))}
+        </Wrapper>
+        <Arrow direction="right" onClick={() => handleClick("right")}>
+          <ArrowRightOutlined />
+        </Arrow>
+      </Container>
+    </SliderDiv>
   );
 };
 
